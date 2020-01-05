@@ -74,7 +74,7 @@ class MathItemAdapter(private val mathList: List<MathItem>, private val context:
 
             //when this item has been newly added to the list it get's its own shake animation with a random startOffset
             val shakeAnimation = AnimationUtils.loadAnimation(context, R.anim.math_item_shake_animation)
-            shakeAnimation.startOffset = Random.nextLong(1000)
+            shakeAnimation.startOffset = Random.nextLong(25)
             shakeAnimList.add(shakeAnimation)
         }
         else{
