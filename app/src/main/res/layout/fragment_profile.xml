@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".ProfileFragment">
+
+    <TextView
+        android:id="@+id/tvProfileName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_name"
+        android:textColor="@android:color/white"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/spProfileDifficulty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spProfileDifficulty"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/spProfileOperator"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfileName"
+        tools:layout_editor_absoluteX="131dp" />
+
+    <Spinner
+        android:id="@+id/spProfileOperator"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cbTrivia"
+        app:layout_constraintTop_toBottomOf="@+id/spProfileDifficulty"
+        tools:layout_editor_absoluteX="131dp" />
+
+    <CheckBox
+        android:id="@+id/cbTrivia"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl"
+        android:text="@string/profile_trivia"
+        android:textColor="@android:color/white"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvProfileStatsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/spProfileOperator"
+        tools:layout_editor_absoluteX="146dp" />
+
+    <TextView
+        android:id="@+id/tvProfileStatsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profile_stats"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cvStatsGeneral"
+        app:layout_constraintTop_toBottomOf="@+id/cbTrivia"
+        tools:layout_editor_absoluteX="115dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvStatsGeneral"
+        android:layout_width="@dimen/profile_stats_cardView_width"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cvStatsDifficulty"
+        app:layout_constraintTop_toBottomOf="@+id/tvProfileStatsTitle"
+        tools:layout_editor_absoluteX="93dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStatsGeneralTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_general_stats_title"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/tvStatsAnswered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_answered"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsGameTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_game_time"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsCorrects"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_corrects"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsWrongs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_wrongs"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsHighestStreak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_highest_streak"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvStatsDifficulty"
+        android:layout_width="@dimen/profile_stats_cardView_width"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cvStatsOperator"
+        app:layout_constraintTop_toBottomOf="@+id/cvStatsGeneral"
+        tools:layout_editor_absoluteX="93dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStatsDifficultyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_difficulty_title"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/tvStatsEasy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_total_easy"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsModerate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_total_moderate"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsHard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_total_hard"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvStatsOperator"
+        android:layout_width="@dimen/profile_stats_cardView_width"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvStatsDifficulty"
+        tools:layout_editor_absoluteX="93dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStatsOperatorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_operator_title"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/tvStatsAddition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_addition"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsSubtraction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_total_moderate"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsMultiplication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_multiplication"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_division"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/tvStatsModulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/profile_stats_margin"
+                android:text="@string/profile_stats_modulo"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

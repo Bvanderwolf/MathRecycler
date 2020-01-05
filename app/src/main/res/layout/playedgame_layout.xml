@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/mtrl_card_spacing_custom"
+    android:layout_marginTop="@dimen/mtrl_card_spacing_custom"
+    android:layout_marginLeft="@dimen/mtrl_card_spacing_custom">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mtrl_card_spacing_custom"
+            android:text="@string/played_game_difficulty"
+            android:textSize="@dimen/played_game_text_size"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOperator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mtrl_card_spacing_custom"
+            android:text="@string/played_game_operator"
+            android:textSize="@dimen/played_game_text_size"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDifficulty" />
+
+        <TextView
+            android:id="@+id/tvGameTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mtrl_card_spacing_custom"
+            android:text="@string/game_popup_gameTime"
+            android:textSize="@dimen/played_game_text_size"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOperator" />
+
+        <TextView
+            android:id="@+id/tvCorrectAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mtrl_card_spacing_custom"
+            android:layout_marginTop="20dp"
+            android:text="@string/played_game_correct_answers"
+            android:textSize="@dimen/played_game_text_size"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGameTime" />
+
+        <TextView
+            android:id="@+id/tvWrongAnswers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mtrl_card_spacing_custom"
+            android:text="@string/played_game_wrong_answers"
+            android:textSize="@dimen/played_game_text_size"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCorrectAnswers" />
+
+        <TextView
+            android:id="@+id/tvPlayedGameDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mtrl_card_spacing_custom"
+            android:text="@string/played_game_date"
+            android:textSize="@dimen/played_game_text_size"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWrongAnswers" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

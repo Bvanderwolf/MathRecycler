@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">MathRecycler</string>
+    <string name="label_play_activity">PlayActivity</string>
+    <string name="label_history_activity">HistoryActivity</string>
+    <string name="action_history">History</string>
+    <string name="action_clear_backlog">Clear Backlog</string>
+    <string name="welcome_text">Welcome Player</string>
+    <string name="difficulty_select_info">Select the difficulty and math operator with which you want to play. Or use the player settings</string>
+    <string name="difficulty_select_title">Welcome to the MathRecycler</string>
+    <string name="game_info">The game works as follows: As you enter the game the screen will be filled up with math items. A math item consist of
+        a statement that can be either true or false. Recycle math items by swiping them, asserting the statement to be true when swiping right
+        and asserting the statement to be false when swiping left. After choosing your difficulty and operator, press the arrow button to start recycling</string>
+    <string name="button_use_player_settings">Use Player Settings</string>
+    <string name="played_game_operator">Operator: %1$s</string>
+    <string name="played_game_difficulty">Difficulty: %1$s</string>
+    <string name="played_game_wrong_answers">Wrong Answers: %1$s</string>
+    <string name="played_game_correct_answers">Correct Answers: %1$s</string>
+    <string name="played_game_date">Date: %1$s</string>
+    <string name="played_game_error">Could not get played game from Database</string>
+    <string name="game_streak">Streak: %1$s</string>
+    <string name="game_answered">Answered: %1$s</string>
+    <string name="game_popup_title">Well Played!</string>
+    <string name="game_popup_results">Your results are: </string>
+    <string name="game_popup_gameTime">Game Time: %1$s seconds</string>
+    <string name="game_popup_return">RETURN</string>
+    <string name="last_played_game_title">Most Recent Game</string>
+    <string name="best_played_game_title">Best Played Game</string>
+    <string name="trivia_title">Did You Know That..</string>
+    <string name="trivia_subtitle">The number %1$s is not just a random number</string>
+    <string name="profile_name">Name: %1$s</string>
+    <string name="profile_trivia">Number Trivia</string>
+    <string name="profile_stats">Player Statistics</string>
+    <string name="profile_general_stats_title">General</string>
+    <string name="profile_stats_answered">Total answered: %1$s</string>
+    <string name="profile_stats_game_time">Total game time: %1$s seconds</string>
+    <string name="profile_stats_corrects">Total correct: %1$s</string>
+    <string name="profile_stats_wrongs">Total wrong: %1$s</string>
+    <string name="profile_stats_highest_streak">Highest streak: %1$s</string>
+    <string name="profile_stats_difficulty_title">Difficulty Related</string>
+    <string name="profile_stats_total_easy">Easy Games Played: %1$s</string>
+    <string name="profile_stats_total_moderate">Moderate Games Played: %1$s</string>
+    <string name="profile_stats_total_hard">Hard Games Played: %1$s</string>
+    <string name="profile_stats_operator_title">Operator Related</string>
+    <string name="profile_stats_addition">Addition Games Played: %1$s</string>
+    <string name="profile_stats_subtraction">Subtraction Games Played: %1$s</string>
+    <string name="profile_stats_multiplication">Multiplication Games Played: %1$s</string>
+    <string name="profile_stats_division">Division Games Played: %1$s</string>
+    <string name="profile_stats_modulo">Modulo Games Played: %1$s</string>
+    <string name="best_game_celebrate">You got a new Best Game!!</string>
+    <string-array name="spinner_operator_array">
+        <item>Addition</item>
+        <item>Subtraction</item>
+        <item>Division</item>
+        <item>Multiplication</item>
+        <item>Modulo</item>
+    </string-array>
+    <string-array name="spinner_difficulty_array">
+        <item>Easy</item>
+        <item>Moderate</item>
+        <item>Hard</item>
+    </string-array>
+</resources>

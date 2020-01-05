@@ -1,0 +1,10 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="mtrl_card_spacing_custom">8dp</dimen>
+    <dimen name="played_game_text_size">8sp</dimen>
+    <dimen name="best_last_game_text_size">12sp</dimen>
+    <dimen name="math_item_card_width">200dp</dimen>
+    <dimen name="game_popup_margin">16dp</dimen>
+    <dimen name="profile_stats_cardView_width">225dp</dimen>
+    <dimen name="profile_stats_margin">2dp</dimen>
+</resources>
