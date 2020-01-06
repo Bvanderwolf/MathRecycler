@@ -13,6 +13,7 @@ import kotlin.random.Random
 class MathItemAdapter(private val mathList: List<MathItem>, private val context: Context): RecyclerView.Adapter<MathItemAdapter.ViewHolder>(){
 
     private var animationPosition = -1
+    private val maxShakeStartOffset: Long = 25
 
     private val shakeAnimList = arrayListOf<Animation>()
     var shakingList = false
@@ -74,7 +75,7 @@ class MathItemAdapter(private val mathList: List<MathItem>, private val context:
 
             //when this item has been newly added to the list it get's its own shake animation with a random startOffset
             val shakeAnimation = AnimationUtils.loadAnimation(context, R.anim.math_item_shake_animation)
-            shakeAnimation.startOffset = Random.nextLong(25)
+            shakeAnimation.startOffset = Random.nextLong(maxShakeStartOffset)
             shakeAnimList.add(shakeAnimation)
         }
         else{
